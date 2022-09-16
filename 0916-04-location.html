@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="#abc">abc</a>
+    <select id="select1">
+        <option value="0916-01-clock.html">請選擇</option>
+        <option value="0916-02.html">展覽</option>
+        <option value="0916-03-navigator.html">樂園</option>
+        <option value="0916-01-clock.html">手作</option>
+    </select>
+    <script>
+        console.log(location.search);//?key=value
+        console.log(location.hash);//網址後面#abc,跳到網頁特定位置 herf="#abc"
+
+
+        const sel = document.querySelector("#select1")
+        sel.addEventListener("change", event => {
+            // console.log(sel.options[sel.selectedIndex].value);
+            // location.href = sel.options[sel.selectedIndex].value;
+            location.replace(sel.options[sel.selectedIndex].value);
+            //replace 跳轉後不給回上一頁
+
+        })
+
+    </script>
+
+</body>
+
+</html>
